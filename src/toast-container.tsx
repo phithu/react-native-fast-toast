@@ -70,6 +70,10 @@ class ToastContainer extends Component<Props, State> {
     this.setState({ toasts: this.state.toasts.filter((t) => t.id !== id) });
   };
 
+  forceHide = () => {
+    this.setState({toasts: []})
+  }
+
   render() {
     const { toasts } = this.state;
     let { placement, offset } = this.props;
